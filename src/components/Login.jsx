@@ -3,7 +3,6 @@ import Header from './Header'
 import { checkValidData } from '../utils/validate.jsx'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase.jsx'
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice.jsx';
 
@@ -11,7 +10,7 @@ const Login = () => {
     const name = useRef(null);
     const email = useRef(null);
     const password = useRef(null)
-    const navigate = useNavigate();
+
     const dispatch = useDispatch();
     const [isSignInForm, setIsSignInForm] = useState(true);
     const [errorMesage, setErrorMessage] = useState(null);
@@ -40,7 +39,7 @@ const Login = () => {
                         const { uid, email, displayName, photoURL } = auth.currentUser;
                         dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
 
-                        navigate("/browse")
+
                         // ...
                     }).catch((error) => {
                         // An error occurred
@@ -63,9 +62,6 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    // console.log(user);
-                    navigate("/browse")
-                    // ...
                 })
                 .catch((error) => {
                     const errorCode = error.code;
@@ -87,7 +83,7 @@ const Login = () => {
                 <img
                     src="https://assets.nflxext.com/ffe/siteui/vlv3/6fd9d446-cd78-453a-8c9c-417ed3e00422/web/IN-en-20251117-TRIFECTA-perspective_2fe4e381-977f-49fd-a7f4-1da0bcf09429_large.jpg"
                     alt="hero-image"
-                // className=' w-screen h-screen object-cover'
+
                 />
             </div>
 
