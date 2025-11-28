@@ -19,6 +19,9 @@
 - bug fix : sign up user displayName and profile picture update
 - bug fix : if the user is not logged in Redirect /browse to Login Page and viceversa
 - unsubscribed to the onAuthStateChanged callback
+- Add values to constant
+- Register TMDB API & create an app
+- Get Data from TMDB
 
 # Features
 

@@ -5,3 +5,11 @@ export const USER_AVATAR =
     "https://imgs.search.brave.com/_1YhWGfJE_pbpg5x-rNvmWKanuf0TuNM8vjby3XCJhQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJzLmNvbS9p/bWFnZXMvaGQvbmV0/ZmxpeC1wcm9maWxl/LXBpY3R1cmVzLTEw/MDAteC0xMDAwLXFv/OWg4MjEzNHQ5bnYw/ajAuanBn"
 
 export const BG_URL = "https://assets.nflxext.com/ffe/siteui/vlv3/6fd9d446-cd78-453a-8c9c-417ed3e00422/web/IN-en-20251117-TRIFECTA-perspective_2fe4e381-977f-49fd-a7f4-1da0bcf09429_large.jpg"
+
+export const API_OPTIONS = {
+    method: 'GET',
+    headers: {
+        accept: 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzMDJlZjI5NmM2ZTk1ZDhkYzI3NTIxNmRlMjIxNTgyMCIsIm5iZiI6MTc2NDMwMDMyMy4xMTMsInN1YiI6IjY5MjkxNjIzNzQ0MzcxZTg0YmE3NjBkZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eVcq1Mscg4LeJZmSqH2Y17Mi29L-TAnEB09HbHjLsTc'
+    }
+};
