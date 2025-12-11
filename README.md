@@ -28,6 +28,11 @@
 - plannig for mainConatinaer & secondary conatinaer
 - Embedded the youtube videos and make it autoplay and mute
 - tailwindcss classes to make main conatianer awesome
+- build secondary componant
+- build movie list
+- build movie card
+- TMDB Image CDN
+- Made the browse page amazing
 
 # Features
 

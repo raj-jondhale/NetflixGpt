@@ -57,7 +57,7 @@ const Header = () => {
                     />
                     <button
                         onClick={handleSignout}
-                        className='text-white font-bold m-2'
+                        className='text-white font-bold m-2 pr-5'
                     >
                         (sign out)
                     </button>
