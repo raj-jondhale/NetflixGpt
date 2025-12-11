@@ -22,6 +22,12 @@
 - Add values to constant
 - Register TMDB API & create an app
 - Get Data from TMDB
+- custom hook for now playinh movies
+- create movieSlice
+- update store with movies data
+- plannig for mainConatinaer & secondary conatinaer
+- Embedded the youtube videos and make it autoplay and mute
+- tailwindcss classes to make main conatianer awesome
 
 # Features
 
