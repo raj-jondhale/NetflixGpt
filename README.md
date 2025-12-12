@@ -33,6 +33,9 @@
 - build movie card
 - TMDB Image CDN
 - Made the browse page amazing
+- GPT search Page
+- GPT Search Bar
+- Multilanguage feature in our app
 
 # Features
 
