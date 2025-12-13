@@ -1,20 +1,32 @@
 import React from 'react'
 import MovieList from './MovieList'
 import { useSelector } from 'react-redux'
+import { ShimmerRow } from './Shimmer'
 
 const SecondaryContainer = () => {
     const movies = useSelector(store => store.movies)
-    return (
-        movies.nowPlayingMovies && (
+    if (!movies.nowPlayingMovies) {
+        return (
             <div className='bg-black'>
                 <div className='-mt-25 relative z-20 pl-12'>
-                    <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
-                    <MovieList title={"Popular"} movies={movies.popularMovies} />
-                    <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
-                    <MovieList title={"Upcoming Movies"} movies={movies.upcomingMovies} />
+                    <ShimmerRow title={"Now Playing"} />
+                    <ShimmerRow title={"Popular"} />
+                    <ShimmerRow title={"Top Rated"} />
+                    <ShimmerRow title={"Upcoming Movies"} />
                 </div>
             </div>
         )
+    }
+
+    return (
+        <div className='bg-black'>
+            <div className='-mt-25 relative z-20 pl-12'>
+                <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
+                <MovieList title={"Popular"} movies={movies.popularMovies} />
+                <MovieList title={"Top Rated"} movies={movies.topRatedMovies} />
+                <MovieList title={"Upcoming Movies"} movies={movies.upcomingMovies} />
+            </div>
+        </div>
     )
 }
 

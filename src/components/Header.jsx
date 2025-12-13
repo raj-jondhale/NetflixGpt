@@ -12,7 +12,7 @@ import { changeLanguage } from '../utils/configSlice.jsx';
 const Header = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    // const dispatch = useDispatch();
+
     const user = useSelector(store => store.user);
     const showGptSearch = useSelector(store => store.gpt.showGptSearch);
     const handleSignout = () => {
