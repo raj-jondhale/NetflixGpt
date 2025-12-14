@@ -1,9 +1,9 @@
 import React, { useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import lang from '../utils/languageConstants';
-import groq from '../utils/openai.jsx';
-import { API_OPTIONS } from '../utils/constants.jsx';
-import { addGptMovieResult, setGptLoading, clearGptResults } from '../utils/gptSlice.jsx';
+import lang from '../../config/languageConstants';
+import groq from '../../config/openai.jsx';
+import { API_OPTIONS } from '../../config/constants.jsx';
+import { addGptMovieResult, setGptLoading, clearGptResults } from '../../redux/gptSlice.jsx';
 
 
 const GptSearchBar = () => {

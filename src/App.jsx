@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import Body from './components/Body'
+import Body from './components/Auth/Body'
 import { Provider } from 'react-redux'
-import appStore from './utils/appStore'
+import appStore from './redux/appStore'
 
 function App() {
   const [count, setCount] = useState(0)

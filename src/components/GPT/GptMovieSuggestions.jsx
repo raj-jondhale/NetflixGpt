@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
-import MovieList from './MovieList';
-import { ShimmerGrid } from './Shimmer';
+import MovieList from '../Browse/MovieList';
+import { ShimmerGrid } from '../Common/Shimmer';
 
 const GptMovieSuggestions = () => {
     const gpt = useSelector(store => store.gpt);

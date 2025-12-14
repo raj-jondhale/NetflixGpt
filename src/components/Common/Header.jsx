@@ -2,12 +2,12 @@ import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
-import { auth } from '../utils/firebase.jsx';
-import { addUser, removeUser } from '../utils/userSlice.jsx';
-import { LOGO } from '../utils/constants.jsx';
-import { toggleGptSearchView } from '../utils/gptSlice.jsx';
-import { languageAvailable } from '../utils/languageConstants.jsx';
-import { changeLanguage } from '../utils/configSlice.jsx';
+import { auth } from '../../config/firebase.jsx';
+import { addUser, removeUser } from '../../redux/userSlice.jsx';
+import { LOGO } from '../../config/constants.jsx';
+import { toggleGptSearchView } from '../../redux/gptSlice.jsx';
+import { languageAvailable } from '../../config/languageConstants.jsx';
+import { changeLanguage } from '../../redux/configSlice.jsx';
 
 const Header = () => {
     const dispatch = useDispatch();

@@ -1,11 +1,11 @@
 import React, { useState, useRef } from 'react'
-import Header from './Header'
-import { checkValidData } from '../utils/validate.jsx'
+import Header from '../Common/Header'
+import { checkValidData } from '../../config/validate.jsx'
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
-import { auth } from '../utils/firebase.jsx'
+import { auth } from '../../config/firebase.jsx'
 import { useDispatch } from 'react-redux';
-import { addUser } from '../utils/userSlice.jsx';
-import { BG_URL, USER_AVATAR } from '../utils/constants.jsx';
+import { addUser } from '../../redux/userSlice.jsx';
+import { BG_URL, USER_AVATAR } from '../../config/constants.jsx';
 
 const Login = () => {
     const name = useRef(null);

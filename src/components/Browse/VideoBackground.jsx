@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux'
-import useMovieTrailer from '../hooks/useMovieTrailer'
-import { ShimmerVideo } from './Shimmer'
+import useMovieTrailer from '../../hooks/useMovieTrailer'
+import { ShimmerVideo } from '../Common/Shimmer'
 
 
 const VideoBackground = ({ movieId }) => {
