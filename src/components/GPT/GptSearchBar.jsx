@@ -14,12 +14,12 @@ const GptSearchBar = () => {
         const data = await fetch("https://api.themoviedb.org/3/search/movie?query=" + movie + "&include_adult=false&language=en-US&page=1", API_OPTIONS);
 
         const json = await data.json();
-        // console.log(json.results);
+
         return json.results;
     }
 
     const handleGptSearchClick = async () => {
-        // console.log(searchText.current.value);
+
         dispatch(setGptLoading(true));
         dispatch(clearGptResults());
         //make an api call
@@ -42,12 +42,11 @@ const GptSearchBar = () => {
         }
 
         const gptMovies = gptResults.choices?.[0]?.message?.content.split(",");
-        console.log(gptMovies);
+
         const promiseArray = gptMovies.map((movie) => searchMovieTMDB(movie));
 
         const tmdbResults = await Promise.all(promiseArray);
 
-        console.log(tmdbResults);
         dispatch(addGptMovieResult({ movieNames: gptMovies, movieResults: tmdbResults }));
     }
     return (

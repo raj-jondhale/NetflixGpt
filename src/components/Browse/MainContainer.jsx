@@ -9,7 +9,7 @@ const MainContainer = () => {
     // if (!movies) return;
     if (!movies) return <ShimmerHero />;
     const mainMovie = movies[0];
-    // console.log(mainMovie);
+
 
     const { original_title, overview, id } = mainMovie;
     return (
